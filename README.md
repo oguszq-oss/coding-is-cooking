@@ -45,7 +45,21 @@
 
 ## 安装
 
-把 `coding-is-cooking-zhongcan/` 整个文件夹放到项目的 `.kimi-code/skills/` 下（Claude Code 用户放 `~/.claude/skills/`），重启或重新加载 skills 即可。
+一行命令（skills CLI 会自动识别当前 agent 并装到对应目录）：
+
+```bash
+npx skills add oguszq-oss/coding-is-cooking -y
+```
+
+手动安装：把 `coding-is-cooking-zhongcan/` 整个文件夹放到对应 agent 的 skills 目录，重启或重新加载 skills 即可。
+
+| Runtime | 项目级路径 | 用户级路径 |
+| --- | --- | --- |
+| Kimi Code CLI | `.kimi-code/skills/` | `~/.kimi-code/skills/` |
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
+| 其他 skills-compatible runtime | `.agents/skills/` | `~/.agents/skills/` |
+
+不作为 skill 安装也能用：把 `SKILL.md` 和 `references/` 的内容作为参考资料提供给任意 LLM 对话即可。
 
 ## 文件结构
 
