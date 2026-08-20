@@ -66,10 +66,9 @@ npx skills add oguszq-oss/coding-is-cooking -y
 ```
 coding-is-cooking-zhongcan/
 ├── SKILL.md                  # 规则主体：三档、自检、正误对照、映射表、去AI味
-├── references/
-│   ├── restaurant-workflow.md   # 世界观底座：点菜单的旅程、物流方向铁律、角色表、打烊复盘与开店弧线
-│   └── analogy-handbook.md      # 完整词条映射（前厅篇/后厨篇/厨师篇）+ 类比失真边界 + 附录《中餐厅》金句
-└── evals/
-    ├── evals.json            # 评测用例（5 个场景 + 断言）
-    └── trigger-evals.json    # 触发评测（正例/反例）
+└── references/
+    ├── restaurant-workflow.md   # 世界观底座：点菜单的旅程、物流方向铁律、角色表、打烊复盘与开店弧线
+    └── analogy-handbook.md      # 完整词条映射（前厅篇/后厨篇/厨师篇）+ 类比失真边界 + 附录《中餐厅》金句
 ```
+
+评测用例（`evals/`）为本地工作文件，不随仓库发布（见 `.gitignore`）。
