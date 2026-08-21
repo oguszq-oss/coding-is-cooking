@@ -8,16 +8,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/oguszq-oss/coding-is-cooking/stargazers"><img src="https://img.shields.io/github/stars/oguszq-oss/coding-is-cooking?style=flat&color=yellow" alt="Stars"></a>
-  <a href="#安装"><img src="https://img.shields.io/badge/works_with-30%2B_agents-orange?style=flat" alt="30+ agents"></a>
-</p>
-
-<p align="center">
   <a href="#看效果">看效果</a> ·
   <a href="#三个档位">档位</a> ·
   <a href="#安装">安装</a> ·
   <a href="#难在哪本-skill-解决什么">难在哪</a> ·
-  <a href="#它会露馅的地方实话">露馅处</a> ·
   <a href="#文件结构">文件</a>
 </p>
 
@@ -25,32 +19,31 @@
 
 ## 看效果
 
-<table>
-<tr>
-<th width="50%">没装的 AI</th>
-<th width="50%">装了的</th>
-</tr>
-<tr>
-<td valign="top">
+同一个问题：**“SDK 是什么？”**
 
-> CORS 错误的本质是浏览器的同源策略：当前端页面托管在 a.com，却向 b.com 发起 XMLHttpRequest 时，浏览器会基于安全考虑拦截跨域响应的读取。你需要检查后端是否正确配置了 Access-Control-Allow-Origin 响应头……
+### 没装：信息都对，但像在读说明书
 
-</td>
-<td valign="top">
-
-> 你去隔壁店借了本菜单。菜单捎回来了，可封皮上没写"准你翻"，你就原样收着不翻开。翻不翻开是浏览器替你把的关，"准不准翻"写在对方的响应头里——拦的不是对方给不给，是你能不能看。
-
-</td>
-</tr>
-</table>
-
-同一个报错。一种给你讲课，一种给你讲事。
-
-**解释数据库和 migration（2 档纯类比）：**
-
-> 你说的这两件事是一套的。头一件是给店里立本账：现在客人点的单只存在点单页面上，页面一关就没了；立了账本，每单都记上，本子收进柜子，哪天要查都翻得到。
+> SDK（Software Development Kit，软件开发工具包）是一套帮助开发者构建应用程序的工具集合。它通常包含：
 >
-> 第二件是你说的那个 migration，是改账本格式的规矩：账本的栏目不能随手改，每改一次先开张单子，写清改哪栏、照单改、单子存底，改错了照单子退回去。
+> - **API 接口**：调用某个平台或服务功能的编程接口
+> - **库文件**：预编译好的代码，直接引用即可使用特定功能
+> - **文档**：说明如何安装和使用这些工具
+> - **示例代码**：展示常见用法的演示程序
+> - **调试 / 测试工具**：部分 SDK 还附带模拟器、命令行工具等
+>
+> **用通俗的比喻**：API 像是餐厅的菜单（告诉你“能点什么”），SDK 则像外卖平台 + 骑手服务（帮你把点餐、支付、配送整个流程都办好）。你用 API 需要自己处理很多细节，用 SDK 则开箱即用。
+>
+> **常见例子**：Android SDK、微信支付 SDK、AWS SDK、OpenAI SDK。
+>
+> 比如用 Python 调用 AI 接口，直接 `pip install openai`，然后调用客户端方法即可。这个 `openai` 包就是一个 SDK，它帮你封装了底层 HTTP 请求、鉴权、错误处理等细节。
+
+### 装了：先让人意会，再留下技术锚点
+
+> SDK（软件开发工具包）就是供应商给的“配套套装”。
+>
+> 比如店里要接美团外卖，美团不会让你自己摸索怎么对接，而是给你一整套现成的东西：接单机器、餐盒封条的规格、安装说明书。师傅照着配好的东西用，店就接上了。SDK 就是这个套装——某个服务方（比如微信、支付宝）把自己服务的专用工具和说明书打包给你，你拿去直接能用，不必从零自己造。
+
+没装的版本不是错，只是先让人消化定义、清单和例子。装上以后，先抓住“供应商给的一套接入工具”，再补 SDK、API、框架这些可搜索的技术锚点。
 
 ## 三个档位
 
@@ -62,27 +55,9 @@
 
 对话中直接说"换 2 档"即可切换，AI 不会多嘴确认，直接用新档位说话。
 
-## 安装
-
-一行命令（skills CLI 会自动识别当前 agent 并装到对应目录）：
-
-```bash
-npx skills add oguszq-oss/coding-is-cooking -y
-```
-
-手动安装：把 `coding-is-cooking-zhongcan/` 整个文件夹放到对应 agent 的 skills 目录，重启或重新加载 skills 即可。
-
-| Runtime | 项目级路径 | 用户级路径 |
-| --- | --- | --- |
-| Kimi Code CLI | `.kimi-code/skills/` | `~/.kimi-code/skills/` |
-| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
-| 其他 skills-compatible runtime | `.agents/skills/` | `~/.agents/skills/` |
-
-不作为 skill 安装也能用：把 `SKILL.md` 和 `references/` 的内容作为参考资料提供给任意 LLM 对话即可。
-
 ## 难在哪（本 skill 解决什么）
 
-让 AI 打比方容易，打**对**比方极难。本 skill 的规则全部来自真实用户六轮以上的迭代反馈：
+让 AI 打比方容易，打**对**比方就比较难。本 skill 的规则全部来自真实用户六轮以上的迭代反馈：
 
 - **类比要在真实餐厅世界里成立**：一家店不会有两个门牌号；纸不能冻进冷库；冷库放食材、账本记订单，空间和物件不混；菜单不会自己走路，发起动作的必须是人。
 - **整段要有连续因果**：上一步的结果必须成为下一步的依据，不能靠"然后"把点单、出菜、收桌等不同环节硬拼起来。
@@ -91,29 +66,26 @@ npx skills add oguszq-oss/coding-is-cooking -y
 - **机制不能讲错**：CORS 拦的是"你能不能看"而不是"对方给不给"；技术锚点留着，类比只是桥。
 - **先过人话检查**：去掉术语后，店里的人仍然会这样说；没有自然对应的技术标签直接保留，不硬造餐具或单据。
 - **简练是理解的前提**：直接给结论，无"先给你结论"式元话语，无换档确认寒暄。
-- **去 AI 味**：破折号成瘾、三段排比、填充过渡、安抚堆叠、拔高收尾，检出即删；许可半文半白短句。
-
-## 它会露馅的地方（实话）
-
-类比是脚手架，不是真相。有五处餐厅里天然没有对应物，遇到时 skill 会破一下类比直说：
-
-1. 软件复制不要钱，菜复制要成本——"开源""规模化"讲不了；
-2. 代码能撤销重做，菜做坏就是坏了——git 是时间机器，得单独学；
-3. 用户本身也是数据——"食客把自己存进冷库"是奇景；
-4. 前厅和后厨可以隔着千里——餐厅类比掩盖了网络延迟；
-5. 机器不会累，但会"整整齐齐地错"——bug 是系统性的，不是手抖。
 
 ## 文件结构
 
 ```
 coding-is-cooking-zhongcan/
-├── SKILL.md                  # 规则主体：三档、自检、正误对照、映射表、去AI味
+├── SKILL.md                  # 每次触发必读：执行骨架、三档、风格核心、六道硬闸与高频映射
 └── references/
-    ├── restaurant-workflow.md   # 世界观底座：点菜单的旅程、物流方向铁律、角色表、打烊复盘与开店弧线
-    └── analogy-handbook.md      # 完整词条映射（前厅篇/后厨篇/厨师篇）+ 类比失真边界 + 附录《中餐厅》金句
+    ├── analogy-handbook.md      # 术语手册索引与共同世界观
+    ├── frontend-analogy.md      # 前端、框架、组件与构建长尾映射
+    ├── backend-analogy.md       # 后端、数据库、部署、安全、访问令牌与架构长尾映射
+    ├── external-platform-integration.md # SDK、第三方平台、Webhook、OAuth 与平台测试沙箱
+    ├── data-contracts.md        # schema、TypeBox、断言、Base64 与 endpoint
+    ├── ai-basics.md             # 模型、AI Token、上下文与提示词
+    ├── agent-loop-controls.md   # steering、轮次准备、优雅停止与续谈
+    ├── agent-tools.md           # Agent、执行沙箱、ReAct、工具调用、MCP、RAG 与评测
+    ├── restaurant-workflow.md   # 请求响应、角色物流、协作线、进展与长故事时间线
+    └── quality-checks.md        # 新编或复核时才读的六道详解、正误案例与文风深查
 ```
 
-评测用例（`evals/`）为本地工作文件，不随仓库发布（见 `.gitignore`）。
+主文件只留每次都要守的规则；长尾词典与完整案例按任务加载，避免每次解释都把整本手册塞进上下文。
 
 ## 觉得有用
 
