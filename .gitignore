@@ -1,1 +1,8 @@
 evals/
+.agents/
+.claude/
+skills-lock.json
+result-card-filled.html
+result-card.png
+test-prompts.json
+doc/
