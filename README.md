@@ -70,7 +70,7 @@
 ## 文件结构
 
 ```
-coding-is-cooking-zhongcan/
+coding-is-cooking/
 ├── SKILL.md                  # 每次触发必读：执行骨架、三档、风格核心、六道硬闸与高频映射
 └── references/
     ├── analogy-handbook.md      # 术语手册索引与共同世界观
@@ -81,7 +81,7 @@ coding-is-cooking-zhongcan/
     ├── ai-basics.md             # 模型、AI Token、上下文与提示词
     ├── agent-loop-controls.md   # steering、轮次准备、优雅停止与续谈
     ├── agent-tools.md           # Agent、执行沙箱、ReAct、工具调用、MCP、RAG 与评测
-    ├── restaurant-workflow.md   # 请求响应、角色物流、协作线、进展与长故事时间线
+    ├── restaurant-workflow.md   # 请求响应、外部订单流向、角色物流、协作线、进展与长故事时间线
     └── quality-checks.md        # 新编或复核时才读的六道详解、正误案例与文风深查
 ```
 
