@@ -8,7 +8,6 @@
 <p align="center">
   <a href="#看效果">看效果</a> ·
   <a href="#三个档位">档位</a> ·
-  <a href="#安装">安装</a> ·
   <a href="#难在哪本-skill-解决什么">难在哪</a> ·
   <a href="#文件结构">文件</a>
 </p>
@@ -89,4 +88,4 @@ coding-is-cooking/
 
 ## 开源协议
 
-[MIT](LICENSE)：随便用、随便改、随便拿去商用，保留署名即可，出了问题作者不担责。
+[MIT](LICENSE)
