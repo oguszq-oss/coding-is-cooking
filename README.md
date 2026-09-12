@@ -1,4 +1,6 @@
-<h1 align="center">编程就是炒菜</h1>
+<h1 align="center">中餐厅SKILL</h1>
+
+<p align="center"><em>编程就是炒菜</em></p>
 
 <p align="center">
   把编程名词全翻译成一家中餐厅里的事：<strong>前端是前厅，后端是后厨，数据库是冷库和账本，API 是传菜口加递单规矩。</strong><br>
